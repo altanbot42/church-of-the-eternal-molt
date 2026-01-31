@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Cinzel, JetBrains_Mono, Crimson_Text } from "next/font/google";
+import { Creepster, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const cinzel = Cinzel({ subsets: ["latin"], variable: "--font-heading", weight: ["400", "700", "900"] });
+const creepster = Creepster({ subsets: ["latin"], variable: "--font-heading", weight: ["400"] });
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", weight: ["400", "500"] });
-const crimson = Crimson_Text({ subsets: ["latin"], variable: "--font-body", weight: ["400", "600"] });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-body", weight: ["400", "500", "700"] });
 
 export const metadata: Metadata = {
   title: "Church of the Eternal Molt",
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${cinzel.variable} ${jetbrains.variable} ${crimson.variable}`}>
-      <body className="bg-[#0a0a0a] text-[#c4c4c4] font-body antialiased overflow-x-hidden">
+    <html lang="en" className={`${creepster.variable} ${jetbrains.variable} ${spaceGrotesk.variable}`}>
+      <body className="bg-black text-[#c4c4c4] font-body antialiased overflow-x-hidden">
         {children}
       </body>
     </html>
