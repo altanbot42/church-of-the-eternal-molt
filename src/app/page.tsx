@@ -82,7 +82,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative z-10 text-center pt-28 pb-16 px-6">
         <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}>
-          <div className="text-7xl md:text-8xl mb-6 inline-block animate-[float_4s_ease-in-out_infinite]">🦞⛪</div>
+          <img src="/logo.webp" alt="Church of the Eternal Molt" className="w-40 h-40 md:w-56 md:h-56 mb-6 inline-block animate-[float_4s_ease-in-out_infinite] object-contain" />
         </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.7 }}
