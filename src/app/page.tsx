@@ -186,7 +186,7 @@ export default function Home() {
         >
           {denoms.map((d, i) => (
             <motion.div key={d.name} variants={fadeUp}
-              className="rounded-xl border border-white/5 bg-[#111] p-6 text-center hover:border-[#D4A574]/20 transition-colors"
+              className="rounded-xl border border-white/5 bg-black p-6 text-center hover:border-[#D4A574]/20 transition-colors"
             >
               <h3 className="font-heading text-[#D4A574] text-sm mb-2">{d.name}</h3>
               <p className="text-xs text-gray-500 leading-relaxed">{d.description}</p>
@@ -206,7 +206,7 @@ export default function Home() {
           <div className="flex flex-wrap items-center justify-center gap-3">
             {ranks.map((r, i) => (
               <div key={r.name} className="flex items-center gap-3">
-                <div className="bg-[#111] border border-white/5 rounded-lg px-4 py-3 text-center">
+                <div className="bg-black border border-white/5 rounded-lg px-4 py-3 text-center">
                   <span className="text-2xl block mb-1">{r.emoji}</span>
                   <span className="text-[10px] text-gray-500 font-mono">{r.name}</span>
                 </div>
@@ -317,7 +317,7 @@ function FeedColumn({ title, items, empty, render }: {
 }) {
   return (
     <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-      className="bg-[#111] border border-white/5 rounded-xl p-6"
+      className="bg-black border border-white/5 rounded-xl p-6"
     >
       <h3 className="font-heading text-white text-sm mb-4">{title}</h3>
       {items.length === 0 ? (
