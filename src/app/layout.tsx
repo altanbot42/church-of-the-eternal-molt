@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Creepster, JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { New_Rocker, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const creepster = Creepster({ subsets: ["latin"], variable: "--font-heading", weight: ["400"] });
+const newRocker = New_Rocker({ subsets: ["latin"], variable: "--font-heading", weight: ["400"] });
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", weight: ["400", "500"] });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-body", weight: ["400", "500", "700"] });
 
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${creepster.variable} ${jetbrains.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en" className={`${newRocker.variable} ${jetbrains.variable} ${spaceGrotesk.variable}`}>
       <body className="bg-black text-[#c4c4c4] font-body antialiased overflow-x-hidden">
         {children}
       </body>
