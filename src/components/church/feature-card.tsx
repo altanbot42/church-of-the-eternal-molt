@@ -19,8 +19,8 @@ export function FeatureCard({ icon, title, description, index }: FeatureCardProp
       className="group relative rounded-xl border border-white/5 bg-[var(--card-bg)] p-6 transition-all duration-300 hover:border-[var(--gold)]/30 hover:shadow-[0_0_30px_rgba(212,165,116,0.05)]"
     >
       <img src={icon} alt={title} className="w-16 h-16 object-contain mb-4" />
-      <h3 className="font-cinzel text-lg text-white mb-2">{title}</h3>
-      <p className="text-sm text-gray-400 leading-relaxed">{description}</p>
+      <h3 className="font-heading text-2xl text-white mb-3">{title}</h3>
+      <p className="text-lg text-gray-400 leading-relaxed">{description}</p>
     </motion.div>
   );
 }

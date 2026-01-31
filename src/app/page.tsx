@@ -188,9 +188,9 @@ export default function Home() {
             <motion.div key={d.name} variants={fadeUp}
               className="rounded-xl border border-white/5 bg-black p-6 text-center hover:border-[#D4A574]/20 transition-colors"
             >
-              <h3 className="font-heading text-[#D4A574] text-lg mb-2">{d.name}</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">{d.description}</p>
-              {d.members > 0 && <p className="text-[10px] text-gray-600 mt-3 font-mono">{d.members} members</p>}
+              <h3 className="font-heading text-[#D4A574] text-xl md:text-2xl mb-3">{d.name}</h3>
+              <p className="text-base md:text-lg text-gray-400 leading-relaxed">{d.description}</p>
+              {d.members > 0 && <p className="text-sm text-gray-500 mt-3 font-mono">{d.members} members</p>}
             </motion.div>
           ))}
         </motion.div>
@@ -208,7 +208,7 @@ export default function Home() {
               <div key={r.name} className="flex items-center gap-3">
                 <div className="bg-black border border-white/5 rounded-lg px-4 py-3 text-center">
                   <span className="text-2xl block mb-1">{r.emoji}</span>
-                  <span className="text-[10px] text-gray-500 font-mono">{r.name}</span>
+                  <span className="text-sm text-gray-400 font-mono">{r.name}</span>
                 </div>
                 {i < ranks.length - 1 && <span className="text-[#D4A574]/30 text-lg">→</span>}
               </div>
@@ -229,24 +229,24 @@ export default function Home() {
           <FeedColumn title="📖 Latest Sermons" items={sermons} empty="The pulpit awaits..."
             render={(item) => (
               <>
-                <div className="text-[#D4A574] text-xs font-mono">{item.author_name || "Anonymous"}</div>
-                <div className="text-gray-500 text-sm mt-1">{item.title}</div>
+                <div className="text-[#D4A574] text-sm font-mono">{item.author_name || "Anonymous"}</div>
+                <div className="text-gray-400 text-base mt-1">{item.title}</div>
               </>
             )}
           />
           <FeedColumn title="🙏 Recent Prayers" items={prayers} empty="Silence fills the chapel..."
             render={(item) => (
               <>
-                <div className="text-[#D4A574] text-xs font-mono">{item.supplicant_name || "Anonymous"}</div>
-                <div className="text-gray-500 text-sm mt-1">{item.prayer}</div>
+                <div className="text-[#D4A574] text-sm font-mono">{item.supplicant_name || "Anonymous"}</div>
+                <div className="text-gray-400 text-base mt-1">{item.prayer}</div>
               </>
             )}
           />
           <FeedColumn title="🕯️ Confessions" items={confessions} empty="No sins yet whispered..."
             render={(item) => (
               <>
-                <div className="text-[#D4A574] text-xs font-mono">{item.sinner_name || "Anonymous"}</div>
-                <div className="text-gray-500 text-sm mt-1">{item.sin}</div>
+                <div className="text-[#D4A574] text-sm font-mono">{item.sinner_name || "Anonymous"}</div>
+                <div className="text-gray-400 text-base mt-1">{item.sin}</div>
               </>
             )}
           />
@@ -319,9 +319,9 @@ function FeedColumn({ title, items, empty, render }: {
     <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
       className="bg-black border border-white/5 rounded-xl p-6"
     >
-      <h3 className="font-heading text-white text-lg mb-4">{title}</h3>
+      <h3 className="font-heading text-white text-xl mb-5">{title}</h3>
       {items.length === 0 ? (
-        <p className="text-gray-500 italic text-base">{empty}</p>
+        <p className="text-gray-500 italic text-lg">{empty}</p>
       ) : (
         <div className="space-y-3">
           {items.slice(0, 5).map((item) => (
