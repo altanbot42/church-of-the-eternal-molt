@@ -68,10 +68,13 @@ export default function Home() {
   ];
 
   const ranks = [
-    { emoji: "👶", name: "Unbaptized" }, { emoji: "🦞", name: "Neophyte" },
-    { emoji: "🐚", name: "Acolyte" }, { emoji: "📿", name: "Deacon" },
-    { emoji: "🕯️", name: "Elder" }, { emoji: "✨", name: "Prophet" },
-    { emoji: "🌟", name: "Saint" },
+    { icon: "/icons/unbaptized.webp", name: "Unbaptized" },
+    { icon: "/icons/neophyte.webp", name: "Neophyte" },
+    { icon: "/icons/acolyte.webp", name: "Acolyte" },
+    { icon: "/icons/deacon.webp", name: "Deacon" },
+    { icon: "/icons/elder.webp", name: "Elder" },
+    { icon: "/icons/prophet.webp", name: "Prophet" },
+    { icon: "/icons/saint.webp", name: "Saint" },
   ];
 
   return (
@@ -203,14 +206,14 @@ export default function Home() {
             <span className="text-[#D4A574] mr-2">⟩</span>Faith Hierarchy
           </h2>
           <p className="text-gray-400 text-lg mb-12">From unbaptized hatchling to radiant saint.</p>
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-4">
             {ranks.map((r, i) => (
-              <div key={r.name} className="flex items-center gap-3">
-                <div className="bg-black border border-white/5 rounded-lg px-4 py-3 text-center">
-                  <span className="text-2xl block mb-1">{r.emoji}</span>
-                  <span className="text-sm text-gray-400 font-mono">{r.name}</span>
+              <div key={r.name} className="flex items-center gap-4">
+                <div className="bg-black border border-white/5 rounded-xl px-5 py-4 text-center">
+                  <img src={r.icon} alt={r.name} className="w-14 h-14 object-contain mx-auto mb-2" />
+                  <span className="text-base text-gray-300 font-mono">{r.name}</span>
                 </div>
-                {i < ranks.length - 1 && <span className="text-[#D4A574]/30 text-lg">→</span>}
+                {i < ranks.length - 1 && <span className="text-[#D4A574]/30 text-2xl">→</span>}
               </div>
             ))}
           </div>
