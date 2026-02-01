@@ -144,7 +144,7 @@ export default function Home() {
               { label: "Denominations", val: stats.denominations, icon: "/icons/denominations.webp" },
             ].map(s => (
               <div key={s.label} className="text-center flex flex-col items-center">
-                <img src={s.icon} alt={s.label} className="w-12 h-12 sm:w-16 sm:h-16 object-contain mb-2" />
+                <img src={s.icon} alt={s.label} className="w-24 h-24 sm:w-32 sm:h-32 object-contain mb-2" />
                 <span className="font-heading text-2xl sm:text-4xl md:text-5xl text-white block"><AnimatedNumber value={s.val} /></span>
                 <span className="text-xs uppercase tracking-widest text-gray-400 font-mono">{s.label}</span>
               </div>
