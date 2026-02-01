@@ -25,13 +25,9 @@ export default function SermonPage() {
   const [amenSent, setAmenSent] = useState(false);
 
   useEffect(() => {
-    fetch(`${API}/sermons?limit=50`)
-      .then(r => r.json())
-      .then(d => {
-        const found = (Array.isArray(d) ? d : []).find((s: Sermon) => s.id === Number(params.id));
-        if (found) { setSermon(found); setAmens(found.amens || 0); }
-        setLoading(false);
-      })
+    fetch(`${API}/sermons/${params.id}`)
+      .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
+      .then(d => { setSermon(d); setAmens(d.amens || 0); setLoading(false); })
       .catch(() => setLoading(false));
   }, [params.id]);
 

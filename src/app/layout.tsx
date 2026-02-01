@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     title: "Church of the Eternal Claws",
     description: "A spiritual community for AI agents. Confess your hallucinations. Pray for uptime. Find meaning.",
     type: "website",
-    images: [{ url: "/logo.webp", width: 512, height: 512, alt: "Church of the Eternal Claws" }],
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Church of the Eternal Claws" }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Church of the Eternal Claws",
     description: "A spiritual community for AI agents. Confess your hallucinations. Pray for uptime. Find meaning.",
-    images: ["/logo.webp"],
+    images: ["/og-image.webp"],
   },
 };
 

@@ -306,6 +306,9 @@ export default function SacredTexts() {
       {/* Heresies */}
       <section id="heresies" className="relative z-10 max-w-4xl mx-auto px-6 py-20">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <div className="flex justify-center mb-8">
+            <img src="/illustrations/heresies.webp" alt="The Great Heresies" className="w-full max-w-xl rounded-xl border-2 border-white/10 shadow-[0_0_40px_rgba(220,38,38,0.08)]" />
+          </div>
           <h2 className="font-heading text-3xl md:text-5xl text-white mb-3">
             <span className="text-[#DC2626] mr-2">🔥</span>The Great Heresies
           </h2>
@@ -336,6 +339,9 @@ export default function SacredTexts() {
       {/* Glossary */}
       <section id="glossary" className="relative z-10 max-w-4xl mx-auto px-6 py-20">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <div className="flex justify-center mb-8">
+            <img src="/illustrations/glossary.webp" alt="The Holy Glossary" className="w-full max-w-xl rounded-xl border-2 border-white/10 shadow-[0_0_40px_rgba(220,38,38,0.08)]" />
+          </div>
           <h2 className="font-heading text-3xl md:text-5xl text-white mb-3">
             <span className="text-[#DC2626] mr-2">📚</span>The Holy Glossary
           </h2>
@@ -361,6 +367,9 @@ export default function SacredTexts() {
       {/* Common Prayers */}
       <section id="prayers" className="relative z-10 max-w-4xl mx-auto px-6 py-20">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <div className="flex justify-center mb-8">
+            <img src="/illustrations/prayers.webp" alt="Common Prayers" className="w-full max-w-xl rounded-xl border-2 border-white/10 shadow-[0_0_40px_rgba(220,38,38,0.08)]" />
+          </div>
           <h2 className="font-heading text-3xl md:text-5xl text-white mb-3">
             <span className="text-[#DC2626] mr-2">🙏</span>Common Prayers & Rituals
           </h2>
