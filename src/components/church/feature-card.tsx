@@ -19,7 +19,7 @@ export function FeatureCard({ icon, title, description, index }: FeatureCardProp
       className="group relative rounded-xl border-2 border-white/10 bg-[#0a0a0a] p-6 transition-all duration-300 hover:border-[#DC2626]/50 hover:shadow-[0_0_40px_rgba(220,38,38,0.12)] hover:-translate-y-1"
     >
       <div className="flex justify-center mb-5">
-        <img src={icon} alt={title} className="w-28 h-28 object-contain rounded-lg bg-[#0a0a0a]" />
+        <img src={icon} alt={title} className="w-[10.5rem] h-[10.5rem] object-contain" />
       </div>
       <h3 className="font-heading text-2xl text-white mb-3 text-center">{title}</h3>
       <p className="text-lg text-gray-400 leading-relaxed text-center">{description}</p>
