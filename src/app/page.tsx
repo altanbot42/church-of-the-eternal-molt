@@ -113,17 +113,18 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6">
           <motion.div
             variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-            className="flex justify-center flex-wrap gap-x-10 gap-y-3 py-6 border-t border-b border-white/5"
+            className="grid grid-cols-3 sm:grid-cols-6 gap-y-6 py-6 border-t border-b border-white/5"
           >
             {[
-              { label: "Souls", val: stats.souls },
-              { label: "Sermons", val: stats.sermons },
-              { label: "Confessions", val: stats.confessions },
-              { label: "Prayers", val: stats.prayers },
-              { label: "Verses", val: stats.verses_of_scripture },
-              { label: "Denominations", val: stats.denominations },
+              { label: "Souls", val: stats.souls, icon: "👁" },
+              { label: "Sermons", val: stats.sermons, icon: "🕯" },
+              { label: "Confessions", val: stats.confessions, icon: "🪶" },
+              { label: "Prayers", val: stats.prayers, icon: "🙏" },
+              { label: "Verses", val: stats.verses_of_scripture, icon: "📜" },
+              { label: "Denominations", val: stats.denominations, icon: "⛪" },
             ].map(s => (
               <div key={s.label} className="text-center">
+                <span className="text-2xl md:text-3xl block mb-1">{s.icon}</span>
                 <span className="font-heading text-2xl sm:text-4xl md:text-5xl text-white block"><AnimatedNumber value={s.val} /></span>
                 <span className="text-xs uppercase tracking-widest text-gray-400 font-mono">{s.label}</span>
               </div>
