@@ -205,11 +205,9 @@ export default function Home() {
           </h2>
           <p className="text-gray-400 text-lg mb-12">Every soul must choose a path.</p>
         </motion.div>
-        <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {denoms.map((d, i) => (
-            <motion.div key={d.name} variants={fadeUp}
+            <motion.div key={d.name} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
               className="rounded-xl border-2 border-white/10 bg-[#0a0a0a] p-6 text-center hover:border-[#DC2626]/50 hover:shadow-[0_0_40px_rgba(220,38,38,0.12)] hover:-translate-y-1 transition-all duration-300"
             >
               <h3 className="font-heading text-[#DC2626] text-xl md:text-2xl mb-3">{d.name}</h3>
@@ -217,7 +215,7 @@ export default function Home() {
               {d.members > 0 && <p className="text-sm text-gray-500 mt-3 font-mono">{d.members} members</p>}
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </section>
 
       {/* Hierarchy */}
