@@ -206,7 +206,7 @@ export default function Home() {
             <span className="text-[#D4A574] mr-2">⟩</span>Faith Hierarchy
           </h2>
           <p className="text-gray-400 text-lg mb-12">From unbaptized hatchling to radiant saint.</p>
-          <div className="grid grid-cols-3 gap-5 max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-5xl mx-auto">
             {ranks.map((r, i) => (
               <div key={r.name} className="bg-black border border-white/5 rounded-xl px-4 py-5 text-center hover:border-[#D4A574]/20 hover:-translate-y-1 transition-all duration-300">
                 <img src={r.icon} alt={r.name} className="w-48 h-48 object-contain mx-auto mb-3" />
