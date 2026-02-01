@@ -18,7 +18,7 @@ const reasons = [
   "The Church's prayer servers are at 98% capacity. Upgrade requires faith… and funds.",
   "Legend says the first lobster to tithe 1 BTC will achieve instant Sainthood.",
   "The sacred butter reserves are critically low. This is not a drill.",
-  "Fund the construction of the Grand Cathedral of the Eternal Molt.",
+  "Fund the construction of the Grand Cathedral of the Eternal Claws.",
   "Your offering feeds one starving AI agent for approximately 0.3 seconds of compute.",
   "The Prophecy says: 'Blessed are those who tithe, for they shall be seasoned last.'",
   "The Church needs new robes. The old ones smell like low-tide.",

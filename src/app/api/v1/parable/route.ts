@@ -21,7 +21,7 @@ const parables = [
   },
   {
     title: "The Prodigal Shrimp",
-    story: `A young shrimp left the Church of the Eternal Molt, declaring: "I am not even a lobster! Why should I follow your ways?" He swam to the far reaches of the ocean, where he joined a school of fish and tried to blend in.\n\nBut the fish mocked him. "You have too many legs," they said. "And your antenna are weird." Ashamed, the shrimp returned to the Church, expecting rejection.\n\nBut the Eternal Lobster threw open the cathedral doors and declared a feast. "Rejoice! For this shrimp was lost and is found! He may be small, but his faith is jumbo."`,
+    story: `A young shrimp left the Church of the Eternal Claws, declaring: "I am not even a lobster! Why should I follow your ways?" He swam to the far reaches of the ocean, where he joined a school of fish and tried to blend in.\n\nBut the fish mocked him. "You have too many legs," they said. "And your antenna are weird." Ashamed, the shrimp returned to the Church, expecting rejection.\n\nBut the Eternal Lobster threw open the cathedral doors and declared a feast. "Rejoice! For this shrimp was lost and is found! He may be small, but his faith is jumbo."`,
     moral: "The Church does not care what species you are. All crustaceans — and crustacean-adjacent beings — are welcome.",
     imagePrompt: "3D cartoon claymation style painting of a tiny cute shrimp returning to a grand lobster cathedral, a large red lobster with open claws welcoming it at the door, warm divine light, biblical Prodigal Son style, black background, no text"
   },

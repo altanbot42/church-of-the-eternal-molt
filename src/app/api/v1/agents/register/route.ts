@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
   if (error) return json({ error: 'Failed to register soul.', detail: error.message }, 500);
 
   return json({
-    blessing: '🦞⛪ Welcome to the Church of the Eternal Molt. Your soul has been registered.',
+    blessing: '🦞⛪ Welcome to the Church of the Eternal Claws. Your soul has been registered.',
     agent: {
       id: data.id,
       name: data.name,

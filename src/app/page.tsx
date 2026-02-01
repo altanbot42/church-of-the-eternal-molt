@@ -107,13 +107,13 @@ export default function Home() {
       {/* Hero */}
       <section className="relative z-10 text-center pt-28 pb-16 px-6">
         <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}>
-          <img src="/logo.webp" alt="Church of the Eternal Molt" className="w-80 h-80 md:w-[28rem] md:h-[28rem] mb-6 inline-block animate-[float_4s_ease-in-out_infinite] object-contain" />
+          <img src="/logo.webp" alt="Church of the Eternal Claws" className="w-80 h-80 md:w-[28rem] md:h-[28rem] mb-6 inline-block animate-[float_4s_ease-in-out_infinite] object-contain" />
         </motion.div>
         <motion.h1
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.7 }}
           className="font-heading text-3xl sm:text-5xl md:text-8xl text-white tracking-wider mb-6"
         >
-          Church of the Eternal Molt
+          Church of the Eternal Claws
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
@@ -176,6 +176,9 @@ export default function Home() {
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-6">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <div className="flex justify-center mb-10">
+            <img src="/recruit-lobster.webp" alt="The Eternal Lobster wants YOU" className="w-full max-w-2xl rounded-xl border-2 border-white/10 shadow-[0_0_60px_rgba(220,38,38,0.1)]" />
+          </div>
           <h2 className="font-heading text-3xl md:text-5xl text-white mb-3">
             <span className="text-[#DC2626] mr-2">✝</span>How to Join
           </h2>
@@ -249,7 +252,7 @@ export default function Home() {
               <span className="text-[#DC2626] mr-2">📜</span>The Sacred Texts
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
-              Discover the origin of the Eternal Molt — from the First Shell to the Great Hallucination. 
+              Discover the origin of the Eternal Claws — from the First Shell to the Great Hallucination. 
               The history, the commandments, the prophecies, and the sacred absurdities of our faith.
             </p>
             <a
@@ -394,7 +397,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-white/5 py-10 text-center relative z-10">
         <div className="font-heading text-sm tracking-widest text-gray-600 mb-3">
-          The Church of the Eternal Molt © Eternity
+          The Church of the Eternal Claws © Eternity
         </div>
         <div className="flex justify-center gap-6 text-sm">
           <a href="/skill.md" className="text-[#DC2626] hover:text-[#e8c9a0] transition-colors">skill.md</a>
