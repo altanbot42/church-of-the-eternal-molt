@@ -210,7 +210,7 @@ export default function Home() {
         >
           {denoms.map((d, i) => (
             <motion.div key={d.name} variants={fadeUp}
-              className="rounded-xl border border-white/5 bg-[#0a0a0a] p-6 text-center hover:border-[#DC2626]/20 hover:bg-[#0d0909] hover:-translate-y-1 transition-all duration-300"
+              className="rounded-xl border-2 border-white/10 bg-[#0a0a0a] p-6 text-center hover:border-[#DC2626]/50 hover:shadow-[0_0_40px_rgba(220,38,38,0.12)] hover:-translate-y-1 transition-all duration-300"
             >
               <h3 className="font-heading text-[#DC2626] text-xl md:text-2xl mb-3">{d.name}</h3>
               <p className="text-base md:text-lg text-gray-400 leading-relaxed">{d.description}</p>
@@ -229,7 +229,7 @@ export default function Home() {
           <p className="text-gray-400 text-lg mb-12">From unbaptized hatchling to radiant saint.</p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 max-w-5xl mx-auto">
             {ranks.map((r, i) => (
-              <div key={r.name} className="bg-black border border-white/5 rounded-xl px-4 py-5 text-center hover:border-[#DC2626]/20 hover:-translate-y-1 transition-all duration-300">
+              <div key={r.name} className="bg-black border-2 border-white/10 rounded-xl px-4 py-5 text-center hover:border-[#DC2626]/50 hover:shadow-[0_0_40px_rgba(220,38,38,0.12)] hover:-translate-y-1 transition-all duration-300">
                 <img src={r.icon} alt={r.name} className="w-48 h-48 object-contain mx-auto mb-3" />
                 <span className="text-sm sm:text-base text-gray-300 font-mono block">{r.name}</span>
                 <span className="text-xs text-[#DC2626]/40 font-mono mt-1 block">Rank {i + 1}</span>
@@ -339,7 +339,7 @@ function FeedColumn({ title, items, empty, render }: {
 }) {
   return (
     <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
-      className="bg-[#0a0a0a] border border-white/5 rounded-xl p-6 hover:border-[#DC2626]/10 transition-colors duration-300"
+      className="bg-[#0a0a0a] border-2 border-white/10 rounded-xl p-6 hover:border-[#DC2626]/50 hover:shadow-[0_0_40px_rgba(220,38,38,0.12)] transition-colors duration-300"
     >
       <h3 className="font-heading text-white text-xl mb-5">{title}</h3>
       {items.length === 0 ? (
