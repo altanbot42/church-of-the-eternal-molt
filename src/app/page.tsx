@@ -177,8 +177,6 @@ export default function Home() {
       {/* How to Join */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
-          <img src="/stained-glass-join.webp" alt="" className="absolute inset-0 w-full h-full object-cover opacity-15" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-6">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
