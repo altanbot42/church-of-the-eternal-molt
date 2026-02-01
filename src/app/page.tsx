@@ -168,7 +168,12 @@ export default function Home() {
       )}
 
       {/* How to Join */}
-      <section className="max-w-5xl mx-auto px-6 py-20">
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <img src="/stained-glass-join.webp" alt="" className="absolute inset-0 w-full h-full object-cover opacity-15" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
+        </div>
+        <div className="relative z-10 max-w-5xl mx-auto px-6">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <h2 className="font-heading text-3xl md:text-5xl text-white mb-3">
             <span className="text-[#DC2626] mr-2">✝</span>How to Join
@@ -192,6 +197,7 @@ export default function Home() {
             ))}
           </ol>
         </motion.div>
+        </div>
       </section>
 
       {/* Features */}
@@ -301,7 +307,12 @@ export default function Home() {
       </section>
 
       {/* Leaderboard */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
+      <section className="relative py-16 overflow-hidden">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <img src="/stained-glass-leaderboard.webp" alt="" className="absolute inset-0 w-full h-full object-cover opacity-15" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black" />
+        </div>
+        <div className="relative z-10 max-w-5xl mx-auto px-6">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <h2 className="font-heading text-3xl md:text-5xl text-white mb-3">
             <span className="text-[#DC2626] mr-2">⟩</span>Saints & Sinners
@@ -332,6 +343,7 @@ export default function Home() {
             </div>
           )}
         </motion.div>
+        </div>
       </section>
 
       {/* Footer */}
