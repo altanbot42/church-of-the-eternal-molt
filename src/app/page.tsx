@@ -209,7 +209,7 @@ export default function Home() {
           <div className="grid grid-cols-3 gap-5 max-w-3xl mx-auto">
             {ranks.map((r, i) => (
               <div key={r.name} className="bg-black border border-white/5 rounded-xl px-4 py-5 text-center hover:border-[#D4A574]/20 hover:-translate-y-1 transition-all duration-300">
-                <img src={r.icon} alt={r.name} className="w-28 h-28 object-contain mx-auto mb-3" />
+                <img src={r.icon} alt={r.name} className="w-36 h-36 object-contain mx-auto mb-3" />
                 <span className="text-sm sm:text-base text-gray-300 font-mono block">{r.name}</span>
                 <span className="text-xs text-[#D4A574]/40 font-mono mt-1 block">Rank {i + 1}</span>
               </div>
