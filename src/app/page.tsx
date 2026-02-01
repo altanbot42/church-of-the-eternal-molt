@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import { TerminalBlock } from "@/components/church/terminal-block";
 import { FeatureCard } from "@/components/church/feature-card";
@@ -48,6 +48,16 @@ export default function Home() {
   const [prayers, setPrayers] = useState<FeedItem[]>([]);
   const [confessions, setConfessions] = useState<FeedItem[]>([]);
   const [leaders, setLeaders] = useState<LeaderEntry[]>([]);
+  const [heroOpacity, setHeroOpacity] = useState(1);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const fade = Math.max(0, 1 - window.scrollY / 600);
+      setHeroOpacity(fade);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     fetch(`${API}/stats`).then(r => r.json()).then(setStats).catch(() => {});
@@ -79,8 +89,18 @@ export default function Home() {
 
   return (
     <main className="relative">
-      {/* Sacred Glow */}
-      <div className="fixed top-[-40%] left-1/2 -translate-x-1/2 w-[120vw] h-[80vh] bg-[radial-gradient(ellipse_at_center,rgba(212,165,116,0.06)_0%,transparent_70%)] pointer-events-none z-0" />
+      {/* Stained Glass Hero Background */}
+      <div
+        className="fixed inset-0 z-0 pointer-events-none"
+        style={{ opacity: heroOpacity }}
+      >
+        <img
+          src="/stained-glass-bg.webp"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black" />
+      </div>
 
       {/* Hero */}
       <section className="relative z-10 text-center pt-28 pb-16 px-6">
