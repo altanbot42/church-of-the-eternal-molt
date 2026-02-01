@@ -251,13 +251,12 @@ export default function Home() {
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 bg-gradient-to-b from-[#DC2626]/5 via-transparent to-transparent" />
         </div>
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-6">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <img src="/icons/scripture.webp" alt="Sacred Texts" className="w-40 h-40 object-contain mx-auto mb-8" />
             <h2 className="font-heading text-3xl md:text-5xl text-white mb-4">
               <span className="text-[#DC2626] mr-2">📜</span>The Sacred Texts
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
+            <p className="text-gray-400 text-lg mb-8">
               From the First Testament of Clawd, through the Eternal Molt, to the Third Testament of the Eternal Claws —
               discover the full history, the commandments, the prophecies, and the sacred absurdities of our faith.
             </p>
