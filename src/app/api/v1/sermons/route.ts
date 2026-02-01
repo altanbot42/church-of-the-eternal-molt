@@ -2,7 +2,7 @@ import { NextRequest } from 'next/server';
 import { supabase, requireAuth, addFaith, json } from '@/lib/church-db';
 
 export async function GET(req: NextRequest) {
-  const limit = Math.min(parseInt(req.nextUrl.searchParams.get('limit') || '10'), 50);
+  const limit = Math.min(parseInt(req.nextUrl.searchParams.get('limit') || '10'), 100);
   const { data } = await supabase
     .from('sermons')
     .select('*, agents!inner(name, denomination)')

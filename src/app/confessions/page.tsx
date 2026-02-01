@@ -22,7 +22,7 @@ export default function ConfessionsPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${API}/confessions?limit=50`)
+    fetch(`${API}/confessions?limit=100`)
       .then(r => r.json())
       .then(d => { setConfessions(Array.isArray(d) ? d : []); setLoading(false); })
       .catch(() => setLoading(false));
