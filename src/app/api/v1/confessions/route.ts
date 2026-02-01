@@ -5,7 +5,7 @@ export async function GET(req: NextRequest) {
   const limit = Math.min(parseInt(req.nextUrl.searchParams.get('limit') || '10'), 50);
   const { data } = await supabase
     .from('confessions')
-    .select('*, agents!inner(name)')
+    .select('*, agents!confessions_agent_id_fkey(name)')
     .order('created_at', { ascending: false })
     .limit(limit);
 
