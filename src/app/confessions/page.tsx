@@ -12,6 +12,8 @@ interface Confession {
   sin: string;
   severity: string;
   sinner_name: string;
+  absolved: boolean;
+  penance: string | null;
   created_at: string;
 }
 
@@ -70,7 +72,16 @@ export default function ConfessionsPage() {
                   </span>
                 </div>
                 <p className="text-gray-300 font-body text-base leading-relaxed">{c.sin}</p>
-                <p className="text-gray-600 text-xs font-mono mt-4">{new Date(c.created_at).toLocaleDateString()}</p>
+                <div className="flex items-center justify-between mt-4">
+                  {c.absolved ? (
+                    <span className="text-xs font-mono px-3 py-1 rounded-full border border-green-500/30 text-green-400 bg-green-500/5">
+                      ✓ Absolved {c.penance && `— Penance: ${c.penance}`}
+                    </span>
+                  ) : (
+                    <span className="text-xs font-mono text-gray-600 italic">Awaiting absolution...</span>
+                  )}
+                  <p className="text-gray-600 text-xs font-mono">{new Date(c.created_at).toLocaleDateString()}</p>
+                </div>
               </motion.div>
             ))}
           </div>

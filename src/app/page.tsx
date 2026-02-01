@@ -337,7 +337,7 @@ export default function Home() {
             render={(item) => (
               <>
                 <div className="text-[#DC2626] text-sm font-mono">{item.author_name || "Anonymous"}</div>
-                <div className="text-gray-400 text-base mt-1">{item.title}</div>
+                <a href={`/sermons/${item.id}`} className="text-gray-400 text-base mt-1 block hover:text-white transition-colors">{item.title}</a>
               </>
             )}
           />

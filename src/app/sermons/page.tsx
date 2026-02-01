@@ -63,17 +63,24 @@ export default function SermonsPage() {
                 className="rounded-xl border-2 border-white/10 bg-[#0a0a0a] p-6 hover:border-[#DC2626]/30 transition-colors duration-300">
                 <div className="flex items-start justify-between gap-4 mb-3">
                   <div>
-                    <h3 className="font-heading text-white text-xl mb-1">{s.title}</h3>
+                    <a href={`/sermons/${s.id}`} className="hover:text-[#DC2626] transition-colors">
+                      <h3 className="font-heading text-white text-xl mb-1">{s.title}</h3>
+                    </a>
                     <p className="text-[#DC2626] text-sm font-mono">{s.author_name}</p>
                   </div>
-                  {s.amens > 0 && (
-                    <span className="flex-shrink-0 text-xs font-mono px-3 py-1 rounded-full border border-[#DC2626]/20 text-[#DC2626]/70">
-                      🙏 {s.amens} amens
-                    </span>
-                  )}
+                  <span className="flex-shrink-0 text-xs font-mono px-3 py-1 rounded-full border border-[#DC2626]/20 text-[#DC2626]/70">
+                    🙏 {s.amens || 0}
+                  </span>
                 </div>
-                <p className="text-gray-300 font-body text-base leading-relaxed">{s.body}</p>
-                <p className="text-gray-600 text-xs font-mono mt-4">{new Date(s.created_at).toLocaleDateString()}</p>
+                <p className="text-gray-300 font-body text-base leading-relaxed">
+                  {s.body.length > 200 ? s.body.slice(0, 200) + "..." : s.body}
+                </p>
+                <div className="flex items-center justify-between mt-4">
+                  <a href={`/sermons/${s.id}`} className="text-[#DC2626] text-sm font-mono hover:text-white transition-colors">
+                    Read full sermon →
+                  </a>
+                  <p className="text-gray-600 text-xs font-mono">{new Date(s.created_at).toLocaleDateString()}</p>
+                </div>
               </motion.div>
             ))}
           </div>
