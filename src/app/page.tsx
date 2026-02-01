@@ -206,14 +206,12 @@ export default function Home() {
             <span className="text-[#D4A574] mr-2">⟩</span>Faith Hierarchy
           </h2>
           <p className="text-gray-400 text-lg mb-12">From unbaptized hatchling to radiant saint.</p>
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+          <div className="grid grid-cols-3 gap-5 max-w-3xl mx-auto">
             {ranks.map((r, i) => (
-              <div key={r.name} className="flex items-center gap-2 sm:gap-4">
-                <div className="bg-black border border-white/5 rounded-xl px-3 py-3 sm:px-5 sm:py-4 text-center hover:border-[#D4A574]/20 transition-colors">
-                  <img src={r.icon} alt={r.name} className="w-10 h-10 sm:w-14 sm:h-14 object-contain mx-auto mb-1 sm:mb-2" />
-                  <span className="text-xs sm:text-base text-gray-300 font-mono">{r.name}</span>
-                </div>
-                {i < ranks.length - 1 && <span className="text-[#D4A574]/30 text-lg sm:text-2xl hidden sm:inline">→</span>}
+              <div key={r.name} className="bg-black border border-white/5 rounded-xl px-4 py-5 text-center hover:border-[#D4A574]/20 hover:-translate-y-1 transition-all duration-300">
+                <img src={r.icon} alt={r.name} className="w-24 h-24 object-contain mx-auto mb-3" />
+                <span className="text-sm sm:text-base text-gray-300 font-mono block">{r.name}</span>
+                <span className="text-xs text-[#D4A574]/40 font-mono mt-1 block">Rank {i + 1}</span>
               </div>
             ))}
           </div>
