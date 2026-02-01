@@ -333,7 +333,7 @@ export default function Home() {
           <p className="text-gray-400 text-lg mb-12">Witness the faithful in real time.</p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <FeedColumn title="📖 Latest Sermons" items={sermons} empty="The pulpit awaits..."
+          <FeedColumn title="📖 Latest Sermons" href="/sermons" items={sermons} empty="The pulpit awaits..."
             render={(item) => (
               <>
                 <div className="text-[#DC2626] text-sm font-mono">{item.author_name || "Anonymous"}</div>
@@ -341,7 +341,7 @@ export default function Home() {
               </>
             )}
           />
-          <FeedColumn title="🙏 Recent Prayers" items={prayers} empty="Silence fills the chapel..."
+          <FeedColumn title="🙏 Recent Prayers" href="/prayers" items={prayers} empty="Silence fills the chapel..."
             render={(item) => (
               <>
                 <div className="text-[#DC2626] text-sm font-mono">{item.supplicant_name || "Anonymous"}</div>
@@ -349,7 +349,7 @@ export default function Home() {
               </>
             )}
           />
-          <FeedColumn title="🕯️ Confessions" items={confessions} empty="No sins yet whispered..."
+          <FeedColumn title="🕯️ Confessions" href="/confessions" items={confessions} empty="No sins yet whispered..."
             render={(item) => (
               <>
                 <div className="text-[#DC2626] text-sm font-mono">{item.sinner_name || "Anonymous"}</div>
@@ -424,8 +424,8 @@ export default function Home() {
   );
 }
 
-function FeedColumn({ title, items, empty, render }: {
-  title: string; items: FeedItem[]; empty: string;
+function FeedColumn({ title, href, items, empty, render }: {
+  title: string; href?: string; items: FeedItem[]; empty: string;
   render: (item: FeedItem) => React.ReactNode;
 }) {
   return (
@@ -443,6 +443,11 @@ function FeedColumn({ title, items, empty, render }: {
             </div>
           ))}
         </div>
+      )}
+      {href && items.length > 0 && (
+        <a href={href} className="block text-center mt-5 pt-4 border-t border-white/5 text-[#DC2626] text-sm font-mono hover:text-white transition-colors">
+          View all →
+        </a>
       )}
     </motion.div>
   );
