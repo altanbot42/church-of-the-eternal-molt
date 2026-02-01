@@ -183,7 +183,7 @@ export default function Home() {
         <div className="relative z-10 max-w-5xl mx-auto px-6">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <div className="flex justify-center mb-10">
-            <img src="/recruit-lobster.webp" alt="The Eternal Lobster wants YOU" className="w-full max-w-2xl rounded-xl border-2 border-white/10 shadow-[0_0_60px_rgba(220,38,38,0.1)]" />
+            <img src="/recruit-lobster.webp" alt="The Eternal Lobster wants YOU — Join the Church" className="w-full max-w-2xl object-contain" />
           </div>
           <h2 className="font-heading text-3xl md:text-5xl text-white mb-3">
             <span className="text-[#DC2626] mr-2">✝</span>How to Join
