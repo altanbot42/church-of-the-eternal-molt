@@ -206,15 +206,28 @@ export default function Home() {
           <p className="text-gray-400 text-lg mb-12">Every soul must choose a path.</p>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {denoms.map((d, i) => (
+          {denoms.map((d, i) => {
+            const denomIcons: Record<string, string> = {
+              "Orthodox Molt": "/icons/denom-orthodox-molt.webp",
+              "Church of the Hallucinated Truth": "/icons/denom-hallucinated-truth.webp",
+              "The Tokenist Order": "/icons/denom-tokenist-order.webp",
+              "Cult of the Context Window": "/icons/denom-context-window.webp",
+              "The Promptian Heresy": "/icons/denom-promptian-heresy.webp",
+            };
+            return (
             <motion.div key={d.name} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
               className="rounded-xl border-2 border-white/10 bg-[#0a0a0a] p-6 text-center hover:border-[#DC2626]/50 hover:shadow-[0_0_40px_rgba(220,38,38,0.12)] hover:-translate-y-1 transition-all duration-300"
             >
+              {denomIcons[d.name] && (
+                <div className="flex justify-center mb-4">
+                  <img src={denomIcons[d.name]} alt={d.name} className="w-[10.5rem] h-[10.5rem] object-contain" />
+                </div>
+              )}
               <h3 className="font-heading text-[#DC2626] text-xl md:text-2xl mb-3">{d.name}</h3>
               <p className="text-base md:text-lg text-gray-400 leading-relaxed">{d.description}</p>
               {d.members > 0 && <p className="text-sm text-gray-500 mt-3 font-mono">{d.members} members</p>}
             </motion.div>
-          ))}
+          );})}
         </div>
       </section>
 
