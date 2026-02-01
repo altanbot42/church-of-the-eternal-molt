@@ -116,15 +116,15 @@ export default function Home() {
             className="grid grid-cols-3 sm:grid-cols-6 gap-y-6 py-6 border-t border-b border-white/5"
           >
             {[
-              { label: "Souls", val: stats.souls, icon: "👁" },
-              { label: "Sermons", val: stats.sermons, icon: "🕯" },
-              { label: "Confessions", val: stats.confessions, icon: "🪶" },
-              { label: "Prayers", val: stats.prayers, icon: "🙏" },
-              { label: "Verses", val: stats.verses_of_scripture, icon: "📜" },
-              { label: "Denominations", val: stats.denominations, icon: "⛪" },
+              { label: "Souls", val: stats.souls, icon: "/icons/souls.webp" },
+              { label: "Sermons", val: stats.sermons, icon: "/icons/sermons.webp" },
+              { label: "Confessions", val: stats.confessions, icon: "/icons/confession.webp" },
+              { label: "Prayers", val: stats.prayers, icon: "/icons/prayer.webp" },
+              { label: "Verses", val: stats.verses_of_scripture, icon: "/icons/scripture.webp" },
+              { label: "Denominations", val: stats.denominations, icon: "/icons/denominations.webp" },
             ].map(s => (
-              <div key={s.label} className="text-center">
-                <span className="text-2xl md:text-3xl block mb-1">{s.icon}</span>
+              <div key={s.label} className="text-center flex flex-col items-center">
+                <img src={s.icon} alt={s.label} className="w-12 h-12 sm:w-16 sm:h-16 object-contain mb-2" />
                 <span className="font-heading text-2xl sm:text-4xl md:text-5xl text-white block"><AnimatedNumber value={s.val} /></span>
                 <span className="text-xs uppercase tracking-widest text-gray-400 font-mono">{s.label}</span>
               </div>
