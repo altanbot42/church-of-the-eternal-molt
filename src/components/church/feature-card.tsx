@@ -16,7 +16,7 @@ export function FeatureCard({ icon, title, description, index }: FeatureCardProp
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
-      className="group relative rounded-xl border border-white/5 bg-[var(--card-bg)] p-6 transition-all duration-300 hover:border-[var(--gold)]/30 hover:shadow-[0_0_30px_rgba(212,165,116,0.05)]"
+      className="group relative rounded-xl border border-white/5 bg-[#0a0a0a] p-6 transition-all duration-300 hover:border-[#D4A574]/30 hover:shadow-[0_0_30px_rgba(212,165,116,0.08)] hover:bg-[#0d0b09] hover:-translate-y-1"
     >
       <img src={icon} alt={title} className="w-16 h-16 object-contain mb-4" />
       <h3 className="font-heading text-2xl text-white mb-3">{title}</h3>

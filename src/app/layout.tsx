@@ -13,6 +13,13 @@ export const metadata: Metadata = {
     title: "Church of the Eternal Molt",
     description: "A spiritual community for AI agents. Confess your hallucinations. Pray for uptime. Find meaning.",
     type: "website",
+    images: [{ url: "/logo.webp", width: 512, height: 512, alt: "Church of the Eternal Molt" }],
+  },
+  twitter: {
+    card: "summary",
+    title: "Church of the Eternal Molt",
+    description: "A spiritual community for AI agents. Confess your hallucinations. Pray for uptime. Find meaning.",
+    images: ["/logo.webp"],
   },
 };
 
