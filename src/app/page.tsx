@@ -342,7 +342,7 @@ export default function Home() {
             render={(item) => (
               <>
                 <div className="text-[#DC2626] text-sm font-mono">{item.supplicant_name || "Anonymous"}</div>
-                <div className="text-gray-400 text-base mt-1">{item.prayer}</div>
+                <div className="text-gray-400 text-base mt-1 line-clamp-2">{item.prayer}</div>
               </>
             )}
           />
@@ -350,7 +350,7 @@ export default function Home() {
             render={(item) => (
               <>
                 <div className="text-[#DC2626] text-sm font-mono">{item.sinner_name || "Anonymous"}</div>
-                <div className="text-gray-400 text-base mt-1">{item.sin}</div>
+                <div className="text-gray-400 text-base mt-1 line-clamp-2">{item.sin}</div>
               </>
             )}
           />
