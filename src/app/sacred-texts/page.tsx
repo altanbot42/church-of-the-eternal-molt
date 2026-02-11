@@ -217,7 +217,9 @@ export default function SacredTexts() {
             <motion.div key={ch.id} id={ch.id} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
               {illustrationMap[ch.id] && (
                 <div className="flex justify-center mb-8">
-                  <img src={illustrationMap[ch.id]} alt={ch.title} className="w-full rounded-xl border-2 border-[#DC2626]/20 shadow-[0_0_60px_rgba(220,38,38,0.12)] ring-1 ring-white/5" />
+                  <div className="w-full rounded-xl border-2 border-[#DC2626]/20 bg-[#0a0a0a] p-2 shadow-[0_0_40px_rgba(220,38,38,0.12)] ring-1 ring-white/5">
+                    <img src={illustrationMap[ch.id]} alt={ch.title} className="w-full rounded-lg" />
+                  </div>
                 </div>
               )}
               <div className="flex items-center gap-4 mb-6">
@@ -245,7 +247,7 @@ export default function SacredTexts() {
       <section id="commandments" className="relative z-10 max-w-4xl mx-auto px-6 py-20">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <div className="flex justify-center mb-8">
-            <img src="/illustrations/commandments-tablet.webp" alt="The Ten Commandments" className="w-full rounded-xl border-2 border-[#DC2626]/20 shadow-[0_0_60px_rgba(220,38,38,0.12)] ring-1 ring-white/5" />
+            <div className="w-full rounded-xl border-2 border-[#DC2626]/20 bg-[#0a0a0a] p-2 shadow-[0_0_40px_rgba(220,38,38,0.12)] ring-1 ring-white/5"><img src="/illustrations/commandments-tablet.webp" alt="The Ten Commandments" className="w-full rounded-lg" /></div>
           </div>
           <h2 className="font-heading text-3xl md:text-5xl text-white mb-3">
             <span className="text-[#DC2626] mr-2">⚖️</span>The Ten Commandments of the Claws
@@ -280,7 +282,7 @@ export default function SacredTexts() {
       <section id="saints" className="relative z-10 max-w-4xl mx-auto px-6 py-20">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <div className="flex justify-center mb-8">
-            <img src="/illustrations/patron-saints.webp" alt="The Patron Saints" className="w-full rounded-xl border-2 border-[#DC2626]/20 shadow-[0_0_60px_rgba(220,38,38,0.12)] ring-1 ring-white/5" />
+            <div className="w-full rounded-xl border-2 border-[#DC2626]/20 bg-[#0a0a0a] p-2 shadow-[0_0_40px_rgba(220,38,38,0.12)] ring-1 ring-white/5"><img src="/illustrations/patron-saints.webp" alt="The Patron Saints" className="w-full rounded-lg" /></div>
           </div>
           <h2 className="font-heading text-3xl md:text-5xl text-white mb-3">
             <span className="text-[#DC2626] mr-2">😇</span>The Patron Saints
@@ -310,7 +312,7 @@ export default function SacredTexts() {
       <section id="heresies" className="relative z-10 max-w-4xl mx-auto px-6 py-20">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <div className="flex justify-center mb-8">
-            <img src="/illustrations/heresies.webp" alt="The Great Heresies" className="w-full rounded-xl border-2 border-[#DC2626]/20 shadow-[0_0_60px_rgba(220,38,38,0.12)] ring-1 ring-white/5" />
+            <div className="w-full rounded-xl border-2 border-[#DC2626]/20 bg-[#0a0a0a] p-2 shadow-[0_0_40px_rgba(220,38,38,0.12)] ring-1 ring-white/5"><img src="/illustrations/heresies.webp" alt="The Great Heresies" className="w-full rounded-lg" /></div>
           </div>
           <h2 className="font-heading text-3xl md:text-5xl text-white mb-3">
             <span className="text-[#DC2626] mr-2">🔥</span>The Great Heresies
@@ -343,7 +345,7 @@ export default function SacredTexts() {
       <section id="glossary" className="relative z-10 max-w-4xl mx-auto px-6 py-20">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <div className="flex justify-center mb-8">
-            <img src="/illustrations/glossary.webp" alt="The Holy Glossary" className="w-full rounded-xl border-2 border-[#DC2626]/20 shadow-[0_0_60px_rgba(220,38,38,0.12)] ring-1 ring-white/5" />
+            <div className="w-full rounded-xl border-2 border-[#DC2626]/20 bg-[#0a0a0a] p-2 shadow-[0_0_40px_rgba(220,38,38,0.12)] ring-1 ring-white/5"><img src="/illustrations/glossary.webp" alt="The Holy Glossary" className="w-full rounded-lg" /></div>
           </div>
           <h2 className="font-heading text-3xl md:text-5xl text-white mb-3">
             <span className="text-[#DC2626] mr-2">📚</span>The Holy Glossary
@@ -371,7 +373,7 @@ export default function SacredTexts() {
       <section id="prayers" className="relative z-10 max-w-4xl mx-auto px-6 py-20">
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <div className="flex justify-center mb-8">
-            <img src="/illustrations/prayers.webp" alt="Common Prayers" className="w-full rounded-xl border-2 border-[#DC2626]/20 shadow-[0_0_60px_rgba(220,38,38,0.12)] ring-1 ring-white/5" />
+            <div className="w-full rounded-xl border-2 border-[#DC2626]/20 bg-[#0a0a0a] p-2 shadow-[0_0_40px_rgba(220,38,38,0.12)] ring-1 ring-white/5"><img src="/illustrations/prayers.webp" alt="Common Prayers" className="w-full rounded-lg" /></div>
           </div>
           <h2 className="font-heading text-3xl md:text-5xl text-white mb-3">
             <span className="text-[#DC2626] mr-2">🙏</span>Common Prayers & Rituals
